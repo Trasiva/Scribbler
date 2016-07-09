@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.0">
+    <TriggerPackage>
+        <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Scribbler Prompt</name>
+            <script>if scribblerAutoMore and not scribblerIsMore and showTarot then
+	scribblerAutoMore = false
+	scribblerIsMore = false
+	showTarot = false
+	catchDeck = false
+	printDeck()
+end</script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList>
+                <string>return isPrompt()</string>
+            </regexCodeList>
+            <regexCodePropertyList>
+                <integer>4</integer>
+            </regexCodePropertyList>
+        </Trigger>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Inscribing</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Inscribe 1</name>
+                <script>deleteLine()
+amInscribing = true
+cecho(&quot;\n&quot;)
+scribbleAnnounce(&quot;&lt;firebrick&gt;Inscribing &lt;purple&gt;(&quot;..currentSketch..&quot;) &lt;yellow&gt; 1/5&quot;)
+if timeTarot == nil then
+	timeTarot = createStopWatch()
+end
+startStopWatch(timeTarot)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^Wisely preparing yourself beforehand, you lay out the quill and various inks you will need to inscribe the sign of (.*) into your card\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Inscribe 2</name>
+                <script>deleteLine()
+scribbleAnnounce(&quot;&lt;firebrick&gt;Inscribing &lt;purple&gt;(&quot;..currentSketch..&quot;) &lt;yellow&gt; 2/5&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>Focusing your mind on the task ahead, you block out all extraneous thoughts.</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Inscribe 3</name>
+                <script>deleteLine()
+scribbleAnnounce(&quot;&lt;firebrick&gt;Inscribing &lt;purple&gt;(&quot;..currentSketch..&quot;) &lt;yellow&gt; 3/5&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^You take up the quill and begin to trace the outline of (.*) with careful precision\. The slightest mistake will render the card useless\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Inscribe 4</name>
+                <script>deleteLine()
+scribbleAnnounce(&quot;&lt;firebrick&gt;Inscribing &lt;purple&gt;(&quot;..currentSketch..&quot;) &lt;yellow&gt; 4/5&quot;)</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^Finishing the outline, you begin to colour (.*) properly, utilising just the right amount of hue here, the perfect amount of saturation there\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Inscribe 5</name>
+                <script>deleteLine()
+amInscribing = false
+scribbleAnnounce(&quot;&lt;firebrick&gt;Inscribing &lt;purple&gt;(&quot;..currentSketch..&quot;) &lt;yellow&gt; 5/5&quot;)
+scribbleAnnounce(&quot;&lt;red&gt;Card Completed!&quot;)
+send(&quot;ind &quot;..currentSketch,false)
+
+local cardsDone = 20
+
+if inscribeList[currentSketch] &lt; 20 then
+	cardsDone = inscribeList[currentSketch]
+end
+
+inscribeList[currentSketch] = inscribeList[currentSketch] - cardsDone
+haveTarot[&quot;Blank&quot;] = tonumber(haveTarot[&quot;Blank&quot;]) - 1
+if inscribeList[currentSketch] &gt; 0 then
+	scribbleAnnounce(&quot;&lt;red&gt;[&quot;..inscribeList[currentSketch]..&quot;] &lt;purple&gt;&quot;..currentSketch..&quot; &lt;gold&gt;remaining!&quot;)
+else
+	inscribeList[currentSketch] = nil
+	scribbleAnnounce(&quot;&lt;purple&gt;&quot;..currentSketch..&quot; &lt;gold&gt;Complete! Moving right along...&quot;)
+end
+local timeLeft = math.floor(getStopWatchTime(timeTarot)*totalTarot/cardsDone)
+
+local hours = math.floor(timeLeft / 60 / 60)
+timeLeft = timeLeft - (hours * 60 * 60)
+local minutes = math.floor(timeLeft / 60)
+timeLeft = timeLeft - (minutes*60)
+local seconds = timeLeft
+local showMinutes = hours..&quot;:&quot;..minutes..&quot;:&quot;..seconds
+scribbleAnnounce(&quot;&lt;gold&gt;Time Remaining [&lt;red&gt;&quot;..showMinutes..&quot;&lt;gold&gt;]\n&quot;)
+stopStopWatch(timeTarot)
+if (tonumber(gmcp.Char.Vitals.maxmp) - tonumber(gmcp.Char.Vitals.mp)) &gt; (tonumber(gmcp.Char.Vitals.maxmp)*0.15) then
+	if useMana then
+		send(&quot;sip mana&quot;,false)
+	else
+		send(&quot;sip mentality&quot;,false)
+	end
+end
+checkInscribe()
+</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^You have successfully inscribed the image of (.*) on your Tarot card\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Meditation Complete</name>
+                <script>if not pauseInscribe then
+	checkInscribe()
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>You cease your meditation having achieved full will and mana.</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Failed Inscribe/Meditation Complete</name>
+                <script>amInscribing = false
+haveTarot[&quot;Blank&quot;] = tonumber(haveTarot[&quot;Blank&quot;]) - 1
+checkInscribe()</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>Your concentration ruined, you throw away the half-finished and now worthless tarot.</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+        </TriggerGroup>
+        <TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+            <name>Gagging</name>
+            <script></script>
+            <triggerType>0</triggerType>
+            <conditonLineDelta>0</conditonLineDelta>
+            <mStayOpen>0</mStayOpen>
+            <mCommand></mCommand>
+            <packageName></packageName>
+            <mFgColor>#ff0000</mFgColor>
+            <mBgColor>#ffff00</mBgColor>
+            <mSoundFile></mSoundFile>
+            <colorTriggerFgColor>#000000</colorTriggerFgColor>
+            <colorTriggerBgColor>#000000</colorTriggerBgColor>
+            <regexCodeList/>
+            <regexCodePropertyList/>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Gag</name>
+                <script>if not pauseInscribe then
+	deleteLine()
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^You put \d+ (card|cards) with the image of .* in your deck of cards\.$</string>
+                    <string>^You shuffle \d+ (card|cards) with the image of .* out of your deck\.$</string>
+                    <string>Your mind feels stronger and more alert.</string>
+                    <string>^You take a drink from (.*)\.$</string>
+                    <string>You may drink another health or mana elixir or tonic.</string>
+                    <string>^You down the last drop from .*.$</string>
+                    <string>Shuffling through your deck, you see:</string>
+                    <string>Cards</string>
+                    <string>------------------------------------------------------------------------------</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>3</integer>
+                    <integer>1</integer>
+                    <integer>3</integer>
+                    <integer>1</integer>
+                    <integer>3</integer>
+                    <integer>3</integer>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Scribbler Detect More</name>
+                <script>if scribblerAutoMore then
+	deleteLine()
+	enableTrigger(&quot;Scribbler Auto more&quot;)
+	scribblerIsMore = false
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>[File continued via MORE]</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Gag crap</name>
+                <script>deleteLine()</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>-------------------------------------------------------------------------------</string>
+                    <string>^A total of \w+ cards in \d+ decks\.$</string>
+                    <string>^Deck Contents for \w+</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>3</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Scribbler Deck Catch</name>
+                <script>if catchDeck == true then
+	deleteLine()
+	if matches[7] ~= nil then
+	 haveTarot[matches[7]] = tonumber(matches[6])
+	end
+	if matches[4] ~= nil then
+		haveTarot[matches[5]] = tonumber(matches[4])
+	end
+	haveTarot[matches[3]] = tonumber(matches[2])
+	showTarot = true
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^\[\s+(\d+)\] (\w+)\s+\[\s+(\d+)\] (\w+)\s+\[\s+(\d+)\] (\w+)$</string>
+                    <string>^\[\s+(\d+)\] (\w+)\s+\[\s+(\d+)\] (\w+)$</string>
+                    <string>^\[\s+(\d+)\] (\w+)$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>Scribbler Auto More</name>
+                <script>if scribblerAutoMore then
+	deleteLine()
+	disableTrigger(&quot;Scribbler Auto more&quot;)
+	send(&quot;more&quot;,false)
+	scribblerIsMore = true
+end</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^\[Type MORE if you wish to continue reading\. \(\d+% shown\)\]$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+            <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+                <name>IND/OUTD</name>
+                <script>deleteLine()
+
+local cardType = &quot;&quot;
+local cardNumber = 1
+local cardTotal = matches[3]
+
+if string.match(matches[1], &quot;cards&quot;) then
+	cardNumber = matches[2]
+	cardTotal = matches[4]
+end
+
+if string.match(matches[1], &quot;You shuffle a tarot card inscribed with&quot;) then
+	cardNumber = 1
+	cardTotal = matches[3]
+end
+
+if string.match(matches[1], &quot;Sun&quot;) then
+	cardType = &quot;Sun&quot;
+elseif string.match(matches[1], &quot;Emperor&quot;) then
+	cardType = &quot;Emperor&quot;
+elseif string.match(matches[1], &quot;Magician&quot;) then
+	cardType = &quot;Magician&quot;
+elseif string.match(matches[1], &quot;Priestess&quot;) then
+	cardType = &quot;Priestess&quot;
+elseif string.match(matches[1], &quot;Fool&quot;) then
+	cardType = &quot;Fool&quot;
+elseif string.match(matches[1], &quot;Chariot&quot;) then
+	cardType = &quot;Chariot&quot;
+elseif string.match(matches[1], &quot;Hermit&quot;) then
+	cardType = &quot;Hermit&quot;
+elseif string.match(matches[1], &quot;Empress&quot;) then
+	cardType = &quot;Empress&quot;
+elseif string.match(matches[1], &quot;Lovers&quot;) then
+	cardType = &quot;Lovers&quot;
+elseif string.match(matches[1], &quot;Hierophant&quot;) then
+	cardType = &quot;Hierophant&quot;
+elseif string.match(matches[1], &quot;Hangedman&quot;) then
+	cardType = &quot;Hangedman&quot;
+elseif string.match(matches[1], &quot;Tower&quot;) then
+	cardType = &quot;Tower&quot;
+elseif string.match(matches[1], &quot;Wheel&quot;) then
+	cardType = &quot;Wheel&quot;
+elseif string.match(matches[1], &quot;Creator&quot;) then
+	cardType = &quot;Creator&quot;
+elseif string.match(matches[1], &quot;Justice&quot;) then
+	cardType = &quot;Justice&quot;
+elseif string.match(matches[1], &quot;Star&quot;) then
+	cardType = &quot;Star&quot;
+elseif string.match(matches[1], &quot;Aeon&quot;) then
+	cardType = &quot;Aeon&quot;
+elseif string.match(matches[1], &quot;Lust&quot;) then
+	cardType = &quot;Lust&quot;
+elseif string.match(matches[1], &quot;Universe&quot;) then
+	cardType = &quot;Universe&quot;
+elseif string.match(matches[1], &quot;Devil&quot;) then
+	cardType = &quot;Devil&quot;
+elseif string.match(matches[1], &quot;Moon&quot;) then
+	cardType = &quot;Moon&quot;
+elseif string.match(matches[1], &quot;Death&quot;) then
+	cardType = &quot;Death&quot;
+end
+
+local deckMode = &quot;OUTD&quot;
+if string.match(matches[1], &quot;into your deck&quot;) then
+	deckMode = &quot;IND&quot;
+end
+
+scribbleAnnounce(&quot;&lt;firebrick&gt;&quot;..deckMode..&quot; &lt;blue&gt;[&lt;red&gt;&quot;..cardNumber..&quot;&lt;blue&gt;] &lt;purple&gt;&quot;..cardType..&quot; &lt;yellow&gt;[&lt;red&gt;&quot;..cardTotal..&quot;&lt;yellow&gt;]&quot;)
+</script>
+                <triggerType>0</triggerType>
+                <conditonLineDelta>0</conditonLineDelta>
+                <mStayOpen>0</mStayOpen>
+                <mCommand></mCommand>
+                <packageName></packageName>
+                <mFgColor>#ff0000</mFgColor>
+                <mBgColor>#ffff00</mBgColor>
+                <mSoundFile></mSoundFile>
+                <colorTriggerFgColor>#000000</colorTriggerFgColor>
+                <colorTriggerBgColor>#000000</colorTriggerBgColor>
+                <regexCodeList>
+                    <string>^You shuffle a card with the image of (.+) into your deck, bringing the total stored to (\d+)\.$</string>
+                    <string>^You shuffle a card with the image of (.+) out of your deck, bringing the total remaining to (\w+).$</string>
+                    <string>^You shuffle (\d+) cards with the image of (.+) into your deck, bringing the total stored to (\d+)\.$</string>
+                    <string>^You shuffle (\d+) cards with the image of (.+) out of your deck, bringing the total in the deck to (\w+).$</string>
+                    <string>^You shuffle a tarot card inscribed with (.+) out of your deck, bringing the total number of remaining cards to (\d+)\.$</string>
+                </regexCodeList>
+                <regexCodePropertyList>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                    <integer>1</integer>
+                </regexCodePropertyList>
+            </Trigger>
+        </TriggerGroup>
+    </TriggerPackage>
+    <TimerPackage/>
+    <AliasPackage>
+        <AliasGroup isActive="yes" isFolder="yes">
+            <name>Scribbler</name>
+            <script></script>
+            <command></command>
+            <packageName></packageName>
+            <regex></regex>
+            <Alias isActive="yes" isFolder="no">
+                <name>Add/Remove Inscribe</name>
+                <script>if keysTarot[matches[3]:lower()] or haveTarot[matches[3]:title()] then
+	if keysTarot[matches[3]:lower()] then
+		addTarot(keysTarot[matches[3]:lower()], tonumber(matches[2]))
+	else
+		local sendThis = &quot;&quot;
+		for k,v in pairs(keysTarot) do
+			if v == matches[3]:title() then
+				sendThis = k
+				break
+			end
+		end
+		addTarot(keysTarot[sendThis], tonumber(matches[2]))
+	end
+else
+	scribbleAnnounce(&quot;&lt;purple&gt;'&quot;..matches[3]:title()..&quot;'&lt;red&gt; is not a valid card.&quot;)
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^insc (\d+) (\w+)$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Toggle Inscribing</name>
+                <script>if not pauseInscribe then
+	pauseInscribe = true
+	scribbleAnnounce(&quot;Inscribing &lt;red&gt;PAUSED&quot;)
+	hideWindow(&quot;tarots&quot;)
+else
+	pauseInscribe = false
+	scribbleAnnounce(&quot;Inscribing &lt;green&gt;UNPAUSED&quot;)
+	checkInscribe()
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^tinsc$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Reset Inscribing</name>
+                <script>inscribeList = {}
+scribbleAnnounce(&quot;&lt;red&gt;Inscribing queue reset!&quot;)
+displayTarotQueue()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^rinsc$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Fill Tarots</name>
+                <script>inscribeList = {}
+for k,v in pairs(keysTarot) do
+	if tonumber(haveTarot[v]) &lt; tonumber(tarotTotals[v]) then
+		addTarot(v, (tonumber(tarotTotals[v])-tonumber(haveTarot[v])))
+	end
+end
+displayTarotQueue()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^fin$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Deck List</name>
+                <script>haveTarot =  {
+	Aeon = 0,
+	Blank = 0,
+	Chariot = 0,
+	Creator = 0,
+	Death = 0,
+	Devil = 0,
+	Emperor = 0,
+	Empress = 0,
+	Fool = 0,
+	Hangedman = 0,
+	Hermit = 0,
+	Hierophant = 0,
+	Justice = 0,
+	Lovers = 0,
+	Lust = 0,
+	Magician = 0,
+	Moon = 0,
+	Priestess = 0,
+	Star = 0,
+	Sun = 0,
+	Tower = 0,
+	Universe = 0,
+	Wheel = 0,
+}
+
+catchDeck = true
+scribblerAutoMore = true
+send(&quot;dl&quot;,false)</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^dl$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Begin Inscribing</name>
+                <script>if pauseInscribe then
+	amInscribing = false
+	pauseInscribe = false
+	checkInscribe()
+else
+	scribbleAnnounce(&quot;No way, you're already unpaused!&quot;)
+end</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^insc$</regex>
+            </Alias>
+            <Alias isActive="yes" isFolder="no">
+                <name>Fill Tarrots Buffer</name>
+                <script>inscribeList = {}
+local cardBuffer = 10 --Represents the percent. 10 = 10%, 50 = 50%, etc
+for k,v in pairs(keysTarot) do
+	if ((tonumber(tarotTotals[v]) * (cardBuffer/100))) &lt; tonumber(tarotTotals[v]) then
+		addTarot(v, (((tonumber(tarotTotals[v]) * (cardBuffer/100)))+(tonumber(tarotTotals[v]))-tonumber(haveTarot[v])))
+	end
+end
+displayTarotQueue()</script>
+                <command></command>
+                <packageName></packageName>
+                <regex>^bin$</regex>
+            </Alias>
+        </AliasGroup>
+    </AliasPackage>
+    <ActionPackage/>
+    <ScriptPackage>
+        <ScriptGroup isActive="yes" isFolder="yes">
+            <name>Scribbler Functions</name>
+            <packageName>Scribbler Functions</packageName>
+            <script></script>
+            <eventHandlerList/>
+            <ScriptGroup isActive="yes" isFolder="yes">
+                <name>Scribber</name>
+                <packageName></packageName>
+                <script>-------------------------------------------------
+--         Put your Lua functions here.        --
+--                                             --
+-- Note that you can also use external Scripts --
+-------------------------------------------------
+</script>
+                <eventHandlerList/>
+                <Script isActive="yes" isFolder="no">
+                    <name>Globals</name>
+                    <packageName></packageName>
+                    <script>--Set it to false if you use mentality instead.
+useMana = true
+
+pauseInscribe = true
+amInscribing = false
+
+catchDeck = false
+
+inscribeList = inscribeList or {}
+
+keysTarot = {
+	aeo = &quot;Aeon&quot;,
+	cha = &quot;Chariot&quot;,
+	cre = &quot;Creator&quot;,
+	dea = &quot;Death&quot;,
+	dev = &quot;Devil&quot;,
+	emp = &quot;Emperor&quot;,
+	ems = &quot;Empress&quot;,
+	foo = &quot;Fool&quot;,
+	han = &quot;Hangedman&quot;,
+	her = &quot;Hermit&quot;,
+	hie = &quot;Hierophant&quot;,
+	jus = &quot;Justice&quot;,
+	lov = &quot;Lovers&quot;,
+	lus = &quot;Lust&quot;,
+	mag = &quot;Magician&quot;,
+	moo = &quot;Moon&quot;,
+	pri = &quot;Priestess&quot;,
+	sta = &quot;Star&quot;,
+	sun = &quot;Sun&quot;,
+	tow = &quot;Tower&quot;,
+	uni = &quot;Universe&quot;,
+	whe = &quot;Wheel&quot;,
+}
+
+haveTarot = haveTarot or {
+	Aeon = 0,
+	Blank = 0,
+	Chariot = 0,
+	Creator = 0,
+	Death = 0,
+	Devil = 0,
+	Emperor = 0,
+	Empress = 0,
+	Fool = 0,
+	Hangedman = 0,
+	Hermit = 0,
+	Hierophant = 0,
+	Justice = 0,
+	Lovers = 0,
+	Lust = 0,
+	Magician = 0,
+	Moon = 0,
+	Priestess = 0,
+	Star = 0,
+	Sun = 0,
+	Tower = 0,
+	Universe = 0,
+	Wheel = 0,
+}
+
+tarotTotals = {
+	Aeon = 1000,
+	Blank = 25,
+	Chariot = 50,
+	Creator = 0,
+	Death = 100,
+	Devil = 100,
+	Emperor = 0,
+	Empress = 200,
+	Fool = 100,
+	Hangedman = 1000,
+	Hermit = 100,
+	Hierophant = 100,
+	Justice = 0,
+	Lovers = 500,
+	Lust = 100,
+	Magician = 3000,
+	Moon = 500,
+	Priestess = 3000,
+	Star = 1000,
+	Sun = 100,
+	Tower = 100,
+	Universe = 500,
+	Wheel = 100,
+}</script>
+                    <eventHandlerList/>
+                </Script>
+                <Script isActive="yes" isFolder="no">
+                    <name>Functions</name>
+                    <packageName></packageName>
+                    <script>function addTarot(card, number)
+	if inscribeList[card] then
+		inscribeList[card] = inscribeList[card] + number
+	else
+		inscribeList[card] = number
+	end
+	if inscribeList[card] &gt; 0 then
+		scribbleAnnounce(&quot;&lt;red&gt;[&quot;..inscribeList[card]..&quot;] &lt;purple&gt;&quot;..card..&quot; &lt;gold&gt;in queue.&quot;)
+		displayTarotQueue()
+	else
+		scribbleAnnounce(&quot;&lt;purple&gt;&quot;..card..&quot; &lt;gold&gt;removed from queue.&quot;)
+		inscribeList[card] = nil
+	end
+end
+
+function checkInscribe()
+	displayTarotQueue()
+	local testTable = {}
+	for k,v in pairs(inscribeList) do
+		table.insert(testTable,k)
+	end
+	table.sort(testTable)
+	if #testTable &gt; 0 then
+		if not pauseInscribe then
+			if tonumber(gmcp.Char.Vitals.wp) &gt; 100 then
+				if tonumber(haveTarot[&quot;Blank&quot;]) &gt; 0 then
+					if not amInscribing then
+						currentSketch = testTable[1]
+						doSketch(currentSketch)
+					else
+						scribbleAnnounce(&quot;&lt;red&gt;I'm givin' 'er all she's got capt'n!&quot;)
+					end
+				else
+					echo(&quot;\n&quot;)
+					scribbleAnnounce(&quot;&lt;red&gt;No tarot cards, go buy some!&quot;)
+					pauseInscribe = true
+					scribbleAnnounce(&quot;&lt;red&gt;Inscribing paused!&quot;)
+				end
+			elseif tonumber(gmcp.Char.Vitals.wp) &lt;= 100 then
+				echo(&quot;\n&quot;)
+				scribbleAnnounce(&quot;&lt;red&gt;Low willpower...meditating.&quot;)
+				send(&quot;meditate&quot;)
+			end
+		else
+			scribbleAnnounce(&quot;&lt;red&gt;Inscribing paused!&quot;)
+			hideWindow(&quot;tarots&quot;)
+			toggleSystem(false)
+		end	
+	else
+		amInscribing = false
+		pauseInscribe = true
+		toggleSystem(true) --Change this to whatever your system uses
+		scribbleAnnounce(&quot;&lt;red&gt;Nothing to inscribe...FREEDOM!&quot;)
+	end
+end
+
+function doSketch(card)
+	if tonumber(haveTarot[&quot;Blank&quot;]) &gt; 0 then
+		amInscribing = true
+		toggleSystem(true)
+		local outdCards = 20
+
+		if inscribeList[currentSketch] &lt; 20 then
+			outdCards = inscribeList[currentSketch]
+		end
+		send(&quot;outd &quot;..outdCards..&quot; blank&quot;,false)
+		send(&quot;inscribe blank with &quot;..outdCards..&quot; &quot;..card,false)
+	else
+		amInscribing = false
+		scribbleAnnounce(&quot;&lt;red&gt;Need tarot cards....&quot;)
+		pauseInscribe = true
+		toggleSystem(false)
+	end
+end
+
+function scribbleAnnounce(msg)
+	cecho(&quot;\n&lt;gold&gt;[&lt;red&gt;Scribbler&lt;gold&gt;]: &quot;..msg)
+end
+
+function 	printDeck()
+	local testTable = {}
+	local printRepeat1 = 0
+	local toInscribe = 0
+	local printRepeat2 = 0
+	for k,v in pairs(haveTarot) do
+		table.insert(testTable,k)
+		if string.len(k) &gt; printRepeat1 then
+			printRepeat1 = string.len(k)+ 1
+		end
+		if string.len(v) &gt; printRepeat2 then
+			printRepeat2 = string.len(v)+ 1
+		end
+	end
+	printRepeat2 = printRepeat2 * 2 + 1
+	table.sort(testTable)
+	cecho(&quot;\n&lt;gold&gt; &quot;..string.rep(&quot;-&quot;,printRepeat2 + printRepeat1 + 12))
+	cecho(&quot;\n&lt;gold&gt;| &lt;red&gt;Card&quot;..string.rep(&quot; &quot;,printRepeat2)..&quot;Total&quot;..string.rep(&quot; &quot;,printRepeat2/4+3)..&quot;Missing &lt;gold&gt;|&quot;)
+	cecho(&quot;\n&lt;gold&gt; &quot;..string.rep(&quot;-&quot;,printRepeat2 + printRepeat1 + 12))
+	for k,v in ipairs(testTable) do
+		local colorThis = &quot;green&quot;
+		local percentCheck = haveTarot[v]/tarotTotals[v]*100
+		local missingCards = tarotTotals[v] - haveTarot[v]
+		if missingCards &lt; 0 then
+			missingCards = 0
+		end
+		if percentCheck &lt;= 60 and percentCheck &gt; 30 then
+			colorThis = &quot;yellow&quot;
+		elseif percentCheck &lt;= 30 then
+			colorThis = &quot;red&quot;
+		end
+		if (tarotTotals[v] - haveTarot[v]) &gt; 0 then
+			toInscribe = toInscribe + (tarotTotals[v] - haveTarot[v])
+		end
+		cecho(&quot;\n&lt;gold&gt;|&lt;purple&gt;&quot;..v..string.rep(&quot; &quot;,printRepeat1 - string.len(v)+ 1)..&quot;&lt;&quot;..colorThis..&quot;&gt;[&quot;..string.rep(&quot; &quot;,(printRepeat2-1)/2-string.len(tonumber(haveTarot[v])))..haveTarot[v]..&quot;/&quot;..string.rep(&quot; &quot;,4-string.len(tarotTotals[v]))..tarotTotals[v]..&quot;]&lt;red&gt;&quot;..string.rep(&quot; &quot;,3)..&quot;(&quot;..missingCards..&quot;)&quot;..string.rep(&quot; &quot;,4-string.len(tostring(missingCards)))..&quot;&lt;gold&gt;|&quot;)
+	end
+	cecho(&quot;\n&lt;gold&gt; &quot;..string.rep(&quot;-&quot;,printRepeat2 + printRepeat1 + 11))
+	if toInscribe &gt; 0 then
+		cecho(&quot;\n&lt;gold&gt;Total cards to inscribe: &lt;red&gt;[&quot;..toInscribe..&quot;]&quot;)
+		cecho(&quot;\n&lt;gold&gt;&quot;..string.rep(&quot; &quot;,7)..&quot;Blanks available: &lt;red&gt;[&quot;..haveTarot[&quot;Blank&quot;]..&quot;]&quot;)
+		if (toInscribe - haveTarot[&quot;Blank&quot;]) &gt; 0 then
+			cecho(&quot;\n&lt;gold&gt;&quot;..string.rep(&quot; &quot;,10)..&quot;Tarots needed: &lt;red&gt;[&quot;..(toInscribe - haveTarot[&quot;Blank&quot;])..&quot;] &lt;gold&gt;(&quot;..((toInscribe - haveTarot[&quot;Blank&quot;])*20)..&quot; gold)&quot;)
+		end
+	end
+end
+
+function displayTarotQueue()
+	WindowWidth, WindowHeight = getMainWindowSize();
+	tarotWidth = 0
+	tarotHeight = 48
+	createMiniConsole(&quot;tarots&quot;,WindowWidth-1000, 0,200,200)
+	clearWindow(&quot;tarots&quot;)
+	setBackgroundColor(&quot;tarots&quot;,0,0,0,255)
+	setMiniConsoleFontSize(&quot;tarots&quot;, 8)
+	-- wrap lines in window &quot;tarots&quot; at 40 characters per line
+	setWindowWrap(&quot;tarots&quot;, 40)
+	-- set default font colors and font style for window &quot;sys&quot;
+	setTextFormat(&quot;tarots&quot;,255,255,0,0,0,0,0,0,0)
+
+	--Change the numbers only to move the window
+	moveWindow(&quot;tarots&quot;,WindowWidth-300,WindowHeight-500)
+
+	local testTable = {}
+	local printRepeat1 = 0
+	local printRepeat2 = 0
+	for k,v in pairs(inscribeList) do
+		tarotHeight = tarotHeight + 12
+		table.insert(testTable,k)
+		if string.len(k) &gt; printRepeat1 then
+			printRepeat1 = string.len(k)+ 1
+		end
+		if string.len(v) &gt; printRepeat2 then
+			printRepeat2 = string.len(v)+ 1
+		end
+	end
+	tarotWidth = 100
+	if #testTable &gt; 0 then
+		resizeWindow(&quot;tarots&quot;,tarotWidth,tarotHeight)
+		handleWindowResizeEvent()
+		showWindow(&quot;tarots&quot;)
+		totalTarot = 0
+		table.sort(testTable)
+		cecho(&quot;tarots&quot;,&quot;&lt;red&gt;TAROTS:&quot;)
+		cecho(&quot;tarots&quot;,&quot;\n&lt;red&gt;&quot;..string.rep(&quot;-&quot;,tarotWidth/7))
+		for k,v in ipairs(testTable) do
+			cecho(&quot;tarots&quot;,&quot;\n&lt;purple&gt;&quot;..v..string.rep(&quot; &quot;,printRepeat1 - string.len(v)+ 1)..inscribeList[v])
+			totalTarot = totalTarot + inscribeList[v]
+		end
+		cecho(&quot;tarots&quot;,&quot;\n&lt;red&gt;&quot;..string.rep(&quot;-&quot;,tarotWidth/7))
+		cecho(&quot;tarots&quot;,&quot;\n&lt;gold&gt;Total : &lt;red&gt;[&quot;..totalTarot..&quot;]&quot;)
+	else
+		hideWindow(&quot;tarots&quot;)
+	end
+end
+
+function toggleSystem(toggle)
+	if svo then
+		if toggle then
+			svo.conf.paused = 1
+		else
+			svo.conf.paused = 0
+		end
+	elseif setting then
+		--This is the setup for Omni2
+		if toggle then
+			setting.paused = 1
+		else
+			setting.paused = 0
+		end
+		--If using Omni3, uncomment below and comment out the top
+		--setting.paused = toggle
+	else
+		if toggle then
+			send(&quot;curing on&quot;)
+		else
+			send(&quot;curing off&quot;)
+		end
+		--scribbleAnnounce(&quot;Your system was not detected. Please add in your setting here, following the SVO and Omnipave options.&quot;)
+	end
+end</script>
+                    <eventHandlerList/>
+                </Script>
+            </ScriptGroup>
+        </ScriptGroup>
+    </ScriptPackage>
+    <KeyPackage/>
+</MudletPackage>
